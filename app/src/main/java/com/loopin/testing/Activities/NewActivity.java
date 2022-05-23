@@ -1,4 +1,4 @@
-package com.loopin.testing.Helper;
+package com.loopin.testing.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,21 +12,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.loopin.testing.Api.RetrofitController;
+import com.loopin.testing.Models.AddressModel;
+import com.loopin.testing.Models.ResponseModel;
+import com.loopin.testing.Adapter.RoomAdapter;
 import com.loopin.testing.MyDatabase.MyRoomDB;
 import com.loopin.testing.R;
-import com.loopin.testing.Room.Dao.AddressDao;
-import com.loopin.testing.Room.Dao.GeoDao;
-import com.loopin.testing.Room.Dao.ResponseDao;
 import com.loopin.testing.Room.Entity.AddressEntity;
 import com.loopin.testing.Room.Entity.CompanyEntity;
 import com.loopin.testing.Room.Entity.GeoEntity;
 import com.loopin.testing.Room.Entity.ResponseEntity;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-import kotlinx.coroutines.internal.LockFreeLinkedListNode;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -38,6 +36,7 @@ public class NewActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     MyRoomDB myRoomDB;
     AddressEntity addressEntity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -139,7 +138,6 @@ public class NewActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<ResponseModel>> call, Throwable t) {
                 Toast.makeText(NewActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
-                Log.d("vnfguhrtkuih", t.getMessage());
             }
         });
     }

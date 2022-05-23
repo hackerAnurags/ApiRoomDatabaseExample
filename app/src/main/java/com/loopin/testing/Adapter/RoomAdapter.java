@@ -1,4 +1,4 @@
-package com.loopin.testing.Helper;
+package com.loopin.testing.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

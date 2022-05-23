@@ -11,19 +11,23 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Testing">
+        android:theme="@style/Theme.Testing"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".Helper.NewActivity"
-            android:exported="true" >
-
+            android:name=".Activities.RoomQueryTest"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SaleActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity
+            android:name=".Activities.NewActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

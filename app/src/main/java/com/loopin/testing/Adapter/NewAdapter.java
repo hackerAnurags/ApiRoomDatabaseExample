@@ -1,4 +1,4 @@
-package com.loopin.testing.Helper;
+package com.loopin.testing.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.loopin.testing.Models.AddressModel;
+import com.loopin.testing.Models.ResponseModel;
 import com.loopin.testing.R;
 
 import java.util.List;

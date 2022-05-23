@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.NewActivity">
+    tools:context=".Activities.RoomQueryTest">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler"
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone"
-        android:scrollbars="none"/>
+        android:layout_height="400dp"/>
 
     <TextView
-        android:id="@+id/zCode"
+        android:layout_below="@id/listView"
+        android:id="@+id/bName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/recycler"/>
+        android:text="brandName"/>
+
 </RelativeLayout>

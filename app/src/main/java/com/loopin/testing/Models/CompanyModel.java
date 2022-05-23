@@ -1,4 +1,4 @@
-package com.loopin.testing.Helper;
+package com.loopin.testing.Models;
 
 import androidx.room.Entity;
 

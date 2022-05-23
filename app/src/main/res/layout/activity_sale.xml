@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SaleActivity">
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/clickMe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="Sale Detail Report"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:layout_below="@+id/line1">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/scrollRecyle"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+                <TextView
+                    android:id="@+id/srNo"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:text="SNo."
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/shopName"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/srNo"
+                    android:padding="5dp"
+                    android:text="Shop Name"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/srNo"
+                    android:padding="5dp"
+                    android:text="Brand Name"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/brandName"
+                    android:padding="5dp"
+                    android:text="Size"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/brandName"
+                    android:padding="5dp"
+                    android:text="Liquor Type"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/quantity"
+                    android:padding="5dp"
+                    android:text="Liquor Category"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="5dp"
+                    android:text="Quantity"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="5dp"
+                    android:text="MRP"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="5dp"
+                    android:text="Total MRP"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/saleDetailRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorPrimaryDark"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom">
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryDark"/>
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:textSize="12sp"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryDark"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/srNo"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:textSize="12sp"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryDark"/>
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/srNo"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:textSize="12sp"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryDark"/>
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/srNo"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:textSize="12sp"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryDark"/>
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/brandName"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:gravity="right"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryDark"/>
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/brandName"
+                            android:padding="5dp"
+                            android:text="Total"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:gravity="right"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryDark"/>
+                        <TextView
+                            android:id="@+id/grandQty"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:gravity="right"
+                            android:textSize="12sp"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryDark"/>
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:gravity="right"
+                            android:textSize="12sp"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryDark"/>
+                        <TextView
+                            android:id="@+id/grandMrp"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:gravity="right"
+                            android:textSize="12sp"/>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryDark"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+</RelativeLayout>

@@ -1,12 +1,11 @@
-package com.loopin.testing.Helper;
+package com.loopin.testing.Models;
 
-import androidx.annotation.ArrayRes;
 import androidx.room.Entity;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
+import com.loopin.testing.Models.AddressModel;
+import com.loopin.testing.Models.CompanyModel;
 
 @Entity
 public class ResponseModel {

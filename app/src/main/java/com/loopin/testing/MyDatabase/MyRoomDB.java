@@ -3,7 +3,6 @@ package com.loopin.testing.MyDatabase;
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
-import com.loopin.testing.Helper.ResponseModel;
 import com.loopin.testing.Room.Dao.AddressDao;
 import com.loopin.testing.Room.Dao.CompanyDao;
 import com.loopin.testing.Room.Dao.GeoDao;
@@ -21,4 +20,5 @@ public abstract class MyRoomDB extends RoomDatabase {
     public abstract CompanyDao compDao();
     public abstract ResponseDao responseDao();
     public abstract GeoDao geoDao();
+
 }
